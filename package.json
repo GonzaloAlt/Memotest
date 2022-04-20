@@ -1,0 +1,16 @@
+{
+  "name": "memotest",
+  "version": "1.0.0",
+  "description": "Juego memotest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress-dev": "cypress open",
+    "cypress-run": "cypress run"
+  },
+  "author": "Gonzalo Altamirano",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.5.4"
+  }
+}
