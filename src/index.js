@@ -70,8 +70,8 @@ const showColors = (firstFlip, secondFlip) => {
 };
 
 const hideColors = (firstFlip, secondFlip) => {
-  firstFlip.classList.remove("flip-card-active");
   setTimeout(() => {
+    firstFlip.classList.remove("flip-card-active");
     secondFlip.classList.remove("flip-card-active");
     firstFlip.style.pointerEvents = "auto";
     secondFlip.style.pointerEvents = "auto";

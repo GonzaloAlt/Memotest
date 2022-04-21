@@ -46,10 +46,17 @@ describe("resuelve el juego", () => {
 
   it("resuelve el juego", () => {
     cy.get(".box").should("have.length", BOXES_NUMBER);
-
-    pairList.forEach((pair) => {
-      cy.get(pair[0]).click();
-      cy.get(pair[1]).click();
+    // cy.wait(800).then(() => {
+    //   pairList.forEach((pair) => {
+    //     cy.get(pair[0]).click();
+    //     cy.get(pair[1]).click();
+    //   });
+    // });
+    ["red", "black", "green", "yellow", "blue", "violet"].forEach((color) => {
+      cy.get(`.flip-card-front + .${color}`).then((pair) => {
+        pair[0].previousElementSibling.click();
+        pair[1].previousElementSibling.click();
+      });
     });
 
     cy.get("flip-card").should("have.length", 0);
@@ -80,6 +87,5 @@ const getPairBoxes = (boxes) => {
       pair[colorClass] = [box];
     }
   });
-  console.log(pair);
   return pair;
 };
