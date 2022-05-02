@@ -99,6 +99,7 @@ const isGameOver = () => {
 const finishGame = () => {
   const h2GameOver = document.createElement("H2");
   h2GameOver.id = "game-over";
+  h2GameOver.style.color = "#df603b";
   h2GameOver.innerHTML = `Juego finalizado en ${turn} turnos.`;
   $container.innerHTML = "";
   $container.appendChild(h2GameOver);
