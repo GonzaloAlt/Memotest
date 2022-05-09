@@ -202,7 +202,19 @@ button {
   #container {
     width: 90%;
   }
+  .box-border {
+    width: 28%;
+    height: 15vh;
+  }
   .character-box {
     display: none;
+  }
+  .red,
+  .blue,
+  .green,
+  .yellow,
+  .violet,
+  .black {
+    background-size: 65%;
   }
 }
